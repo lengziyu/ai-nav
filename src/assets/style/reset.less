@@ -1,0 +1,310 @@
+
+/**
+ * 隐藏溢出的文本，显示省略号
+ * @param {Number} @width 目标元素宽度
+ */
+ @defaultTextColor: #333;
+ @backgroundColor: #fff;
+
+
+ .text-hidden(@width: 100%) {
+  max-width: @width;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+// inline-block
+.inline-block() {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * 统一各浏览器基础样式，向后兼容
+ * @todo: 描述
+ */
+ body, dl, dd, ul, ol, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, optgroup, p, blockquote, figure, hr, menu, dir, thead, tbody, tfoot, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+a {
+  text-decoration: none;
+  color: @defaultTextColor;
+  &:hover {
+      text-decoration: none;
+      outline: 0 none;
+  }
+  &:active {
+      background-color: transparent;
+      outline: 0 none;
+  }
+  &:focus {
+      // outline: 1px dotted;
+      // outline: 0 none;
+  }
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: @backgroundColor;
+  font-size: 14px;
+  color: @defaultTextColor;
+}
+
+body, button, input, select, textarea {
+  font-family: "Helvetica Neue","Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  -ms-text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  text-autospace: ideograph-alpha ideograph-numeric ideograph-parenthesis;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background-color: #D2E5FF;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monaco, menlo, consolas, 'courier new', courier, monospace;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+q {
+  quotes: none;
+  &:before, &:after {
+      content: ' ';
+      content: none;
+  }
+}
+
+small {
+  font-size: 12px;
+}
+
+sub, sup {
+  font-size: 12px;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  th, td {
+      // border: 1px solid #ddd;
+      // padding: 8px 10px;
+  }
+  th {
+      font-weight: inherit;
+      // border-bottom-width: 2px;
+      // border-bottom-color: #ccc;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+img {
+  border: 0 none;
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0 none;
+  white-space: normal;
+  *margin-left: -7px;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  outline: 0 none;
+}
+
+input, button {
+  *overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+select:disabled option:checked, option:disabled:checked {
+  color: #D2D2D2;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  input {
+      line-height: normal !important;
+  }
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: darkGray;
+  opacity: 1;
+}
+
+label {
+  cursor: pointer;
+}
+
+select[size], select[multiple], select[size][multiple] {
+  border: 1px solid #AAA;
+  padding:0;
+}
+
+// 修正 HTML5 中未定义为 block 的元素
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video, progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+[draggable] {
+  cursor: move;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+  background-color: rgba(0,0,0,0.5);
+}
