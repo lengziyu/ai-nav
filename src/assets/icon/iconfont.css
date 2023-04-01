@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "icon"; /* Project id 3990715 */
+  src: url('iconfont.woff2?t=1680333754694') format('woff2'),
+       url('iconfont.woff?t=1680333754694') format('woff'),
+       url('iconfont.ttf?t=1680333754694') format('truetype'),
+       url('iconfont.svg?t=1680333754694#icon') format('svg');
+}
+
+.icon {
+  font-family: "icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ai-chakan:before {
+  content: "\e62d";
+}
+
+.ai-28dianzan:before {
+  content: "\e651";
+}
+

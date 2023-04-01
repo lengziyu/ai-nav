@@ -1,6 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div>home</div>
+  <div>关于</div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup lang="ts"></script>
+
+<style></style>

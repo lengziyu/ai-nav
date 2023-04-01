@@ -1,7 +1,7 @@
 <template>
-    <RouterView />
+  <RouterView />
 </template>
 
 <style lang="less">
-    @import url('@style/reset.less');
+@import url('@style/reset.less');
 </style>
