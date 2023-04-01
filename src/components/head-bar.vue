@@ -13,7 +13,7 @@
       <nav class="nav">
         <ul>
           <li class="feed current"><a href="">首页</a></li>
-          <li class="site"><a href="">网址精选</a></li>
+          <li class="site"><a href="">优站精选</a></li>
           <li class="user">
             <a href="javascript:;" class="unlogin">前端相关</a>
           </li>

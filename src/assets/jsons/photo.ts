@@ -1,12 +1,6 @@
 const mirrorData = {
-  title: 'GPT国内源',
+  title: '绘画',
   list: [
-    {
-      title: 'chatGPT',
-      subtitle: '是一个最好的GPT',
-      image: '',
-      url: ''
-    },
     {
       title: 'midjourney',
       subtitle:

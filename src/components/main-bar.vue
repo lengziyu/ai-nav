@@ -4,7 +4,7 @@
       <div class="feed-item">
         <div class="feed-thumb">
           <a href="" target="_blank"
-            ><img src="@image/thumb.jpg" alt="item.title"
+            ><img :src="item.image" alt="item.title"
           /></a>
         </div>
         <div class="feed-desc">
