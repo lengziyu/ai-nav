@@ -50,7 +50,7 @@ console.log(props.list)
 
 <style lang="less" scoped>
 @themeColor: #f60;
-@defaultBorderColor: #ccc;
+@defaultBorderColor: #f2f2f2;
 @backgroundColor: #fff;
 
 .text-hidden(@width: 100%) {
@@ -93,7 +93,7 @@ console.log(props.list)
   margin-top: 18px;
   background-color: #ffffff;
   border: 1px solid transparent;
-  border-bottom-color: #cfcfcf;
+  border-bottom-color: #dfdddd;
   -webkit-transtion: border 0.3s;
   transition: border 0.3s;
   .feed-thumb {
@@ -119,7 +119,7 @@ console.log(props.list)
     img {
       vertical-align: top;
       max-width: 100%;
-      max-height: 205px;
+      height: 100%;
       width: 100%;
     }
     .feed-thumb-player {

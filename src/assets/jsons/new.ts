@@ -1,5 +1,5 @@
 const hotData = {
-  title: '最火精选',
+  title: '最新推荐',
   list: [
     {
       title: 'chatGPT',

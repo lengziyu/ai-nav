@@ -2,24 +2,43 @@
   <div class="sidebar">
     <div class="header"><h2>订阅源</h2></div>
     <ul class="recom-list">
-      <li class="feed-list-item feed-recom current">
+      <li
+        v-for="(item, idx) in props.headList"
+        :key="idx"
+        class="feed-list-item feed-recom"
+        :class="{ current: idx === current }"
+        @click="handleHeadItem(idx)"
+      >
         <i class="feed-icon"></i>
-        <span class="feed-name">最新精选</span>
-        <span class="feed-update">99+</span>
-      </li>
-      <li class="feed-list-item feed-recom">
-        <i class="feed-icon"></i>
-        <span class="feed-name">最火推荐</span>
-        <span class="feed-update">99+</span>
+        <span class="feed-name">{{ (item as any).title }}</span>
+        <span class="feed-update">{{ (item as any).list.length }}</span>
       </li>
     </ul>
+    <div class="line"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-// import { ref } from 'vue'
+import { ref } from 'vue'
 
-// const current = ref()
+const current = ref(0)
+let emits = defineEmits(['submit'])
+
+let props = defineProps({
+  headList: {
+    type: Array,
+    default: () => []
+  },
+  total: {
+    type: Number,
+    default: 0
+  }
+})
+console.log(props.headList)
+
+const handleHeadItem = (idx: any) => {
+  emits('submit', idx)
+}
 </script>
 
 <style lang="less" scoped>
