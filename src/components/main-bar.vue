@@ -3,7 +3,7 @@
     <li v-for="(item, idx) in (props.list as any)" :key="idx">
       <div class="feed-item">
         <div class="feed-thumb">
-          <a href="" target="_blank"
+          <a :href="item.url" target="_blank"
             ><img :src="item.image" alt="item.title"
           /></a>
         </div>
@@ -25,10 +25,10 @@
             <div class="feed-counts">
               <div class="counter feed-fav">
                 <i class="icon ai-28dianzan"></i>
-                <span class="num">16</span>
+                <span class="num">0</span>
               </div>
               <div class="counter feed-view">
-                <i class="icon ai-chakan"></i><span class="num">19017</span>
+                <i class="icon ai-chakan"></i><span class="num">0</span>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ console.log(props.list)
   position: relative;
   margin-left: 233px;
   background: #f4f4f4;
-  min-height: calc(100vh - 168px);
+  min-height: calc(100vh - 97px);
   padding-top: 76px;
   overflow: hidden;
   padding-bottom: 30px;
@@ -202,6 +202,7 @@ console.log(props.list)
     margin: 5px 0;
     padding: 0 15px;
     overflow: hidden;
+    transition: all 0.2s;
     p {
       line-height: 20px;
       font-size: 12px;
@@ -288,6 +289,9 @@ console.log(props.list)
     }
     .feed-controls {
       height: 36px;
+    }
+    .feed-words {
+      height: auto;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <div class="header"><h2>订阅源</h2></div>
+    <div class="header"><h2>菜单分类</h2></div>
     <ul class="recom-list">
       <li
         v-for="(item, idx) in props.headList"
@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const current = ref(0)
+const current = ref(3)
 let emits = defineEmits(['submit'])
 
 let props = defineProps({
@@ -37,6 +37,7 @@ let props = defineProps({
 console.log(props.headList)
 
 const handleHeadItem = (idx: any) => {
+  current.value = idx
   emits('submit', idx)
 }
 </script>

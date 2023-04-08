@@ -1,7 +1,7 @@
 <template>
   <div>
     <headbar />
-    <sidebar :head-list="headList" />
+    <sidebar :head-list="headList" @submit="clickSide" />
     <mainbar :list="list" />
     <footbar />
   </div>
@@ -15,15 +15,23 @@ import mainbar from '@/components/main-bar.vue'
 import footbar from '@/components/foot-bar.vue'
 import hotData from '@/assets/jsons/hot'
 import newData from '@/assets/jsons/new'
+import mirrorData from '@/assets/jsons/mirror'
+import photoData from '@/assets/jsons/photo'
+import utilData from '@/assets/jsons/util'
+import docmentData from '@/assets/jsons/docment'
 
-interface ArrItemType {
-  title: string
-  subtitle: string
-  image: string
-  url: string
+const list = ref<any>(photoData.list)
+
+const headList = ref<any[]>([
+  hotData,
+  newData,
+  mirrorData,
+  photoData,
+  utilData,
+  docmentData
+])
+
+const clickSide = (data: any) => {
+  list.value = headList.value[data].list
 }
-
-const list: ArrItemType[] = hotData.list
-
-const headList = ref<any[]>([hotData, newData])
 </script>

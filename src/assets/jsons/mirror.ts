@@ -1,19 +1,34 @@
 const mirrorData = {
-  title: 'GPT国内源',
+  title: 'ChatGPT镜像',
   list: [
     {
-      title: 'chatGPT',
-      subtitle: '是一个最好的GPT',
-      image: '',
-      url: ''
+      title: 'Chat Bot',
+      subtitle: 'BAI 是使用 OpenAI 构建的 AI 软件。',
+      image: '/src/assets/image/mirror/1.png',
+      charge: '',
+      url: 'https://chatbot.theb.ai/'
     },
     {
-      title: 'midjourney',
+      title: 'Arch Bot',
       subtitle:
-        'Midtravel是一个独立的研究实验室，探索新的思维媒介，扩大人类的想象力。',
-      image: '',
-      charge: '新用户免费20次',
-      url: ''
+        '由Open AI API (gpt-3.5-turbo) 和 Vercel 提供支持。ARCHBOT内置一些建筑师大师，您可以与大师对话。',
+      image: '/src/assets/image/mirror/2.png',
+      charge: '',
+      url: 'https://archbot.top/'
+    },
+    {
+      title: 'Chat8',
+      subtitle: 'Open AI 国内源。',
+      image: '/src/assets/image/mirror/3.png',
+      charge: '',
+      url: 'https://chat.gamejx.cn/#/'
+    },
+    {
+      title: 'poe',
+      subtitle: '快速 AI 聊天，可以访问 ChatGPT、Claude 等。',
+      image: '/src/assets/image/mirror/4.png',
+      charge: '',
+      url: 'https://poe.com/'
     }
   ]
 }

@@ -2,7 +2,7 @@ const hotData = {
   title: '最新推荐',
   list: [
     {
-      title: 'chatGPT',
+      title: 'chatGPT new',
       subtitle: '是一个最好的GPT',
       image: 'http://192.168.1.233:9000/luban-cloud/image/thumb.jpg',
       url: ''
